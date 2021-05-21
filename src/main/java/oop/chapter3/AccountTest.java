@@ -9,7 +9,8 @@ public class AccountTest {
         Scanner sc = new Scanner(System.in);
 
         // create an object Account
-        Account account1= new Account();
+        Account account1= new Account("Hello World",1000.00);
+        Account account2= new Account("James bond", 200.00);
 
         // display the name of the account which gives as the default value
         // of the instance variable: the default value of strings is 'NULL'
@@ -20,6 +21,16 @@ public class AccountTest {
         account1.setName(sc.nextLine());
 
         // display the name of the account
-        System.out.printf("account name is %s%n", account1.getName());
+        System.out.printf("account name is %s and the balance:$ %.2f %n", account1.getName(), account1.getBalance());
+
+        // Display the name of the account
+        System.out.printf("The account name %s and balance:$ %.2f %n", account2.getName(), account2.getBalance());
+        //
+        System.out.println("enter the amount of the balance ");
+        account1.deposit(sc.nextDouble());
+
+        // display the name of the account
+        System.out.printf("account name is %s and the balance %.2f %n", account1.getName(), account1.getBalance());
+
     }
 }
